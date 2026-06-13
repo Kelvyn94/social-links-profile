@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body stylings */
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  background-color: hsl(0, 0%, 8%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Card styling */
+.card {
+  background-color: hsl(0, 0%, 12%);
+  width: 90%;
+  max-width: 38.4rem;
+  border-radius: 1.2rem;
+  padding: 44rem 2.4rem 3.2rem 2.4rem;
+  text-align: center;
+}
+
+/* Text styles */
+.name {
+  color: hsl(0, 0%, 100%);
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.location {
+  color: hsl(75, 94%, 57%);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 2.4rem;
+}
+
+.bio {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 2.4rem;
+}
+
+/* Social links (button) */
+.social-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.social-link {
+  display: block;
+  background-color: hsl(0, 0%, 20%);
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 1.2rem 2.4rem;
+  border-radius: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+/* Hover state - when mouse goes over the button*/
+.social-link:hover {
+  background-color: hsl(75, 94%, 57%);
+  color: hsl(0, 0%, 8%);
+  cursor: pointer;
+}
+
+/* Focus state  - for keyboard navigation*/
+.social-link:focus {
+  background-color: hsl(75, 94%, 57%);
+  color: hsl(0, 0%, 8%);
+  cursor: pointer;
+}
+
+/* Attribution Footer  */
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+  color: hsl(0, 0%, 50%);
+  margin-top: 2.4rem;
+  position: absolute;
+  bottom: 1.6rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design  */
+
+/* Tablet and desktop adjustments */
+@media (min-width: 48rem) {
+  .card {
+    padding: 4rem 3.2rem 3.2rem 3.2rem;
+  }
+
+  .social-link {
+    padding: 1.4rem 2.4rem;
+  }
+}
+
+/* Very small phone (under 375px) */
+@media (max-width: 23.4375rem) {
+  .card {
+    width: 95%;
+    padding: 3.2rem 2rem 2.8rem 2rem;
+  }
+
+  /* Respect user's font size preferences, if user sets browser font size larger, everything scales gracefully */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+}
