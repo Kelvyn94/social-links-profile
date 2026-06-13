@@ -27,16 +27,26 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop view of the social links profile](./design/desktop-design.jpg)
-![Mobile view of the social links profile](./design/mobile-design.jpg)
-![Active states showing hover effects](./design/active-states.jpg)
+Desktop view of the social links profile:
 
-_(Screenshot files are in the `/design` folder from the starter kit)_
+<img width="1440" height="960" alt="image" src="https://github.com/user-attachments/assets/42137a6d-a75b-4fa5-bf89-d65899a94226" />
+
+
+
+Mobile view of the social links profile:
+
+<img width="375" height="812" alt="image" src="https://github.com/user-attachments/assets/349f4c46-d21c-4850-886a-57fb3027cd94" />
+
+
+
+Active states showing hover effects
+<img width="1440" height="960" alt="image" src="https://github.com/user-attachments/assets/fb13824a-e877-4e55-8607-01fd38db40ad" />
+
 
 ### Links
 
-- Solution URL: [Add your solution URL here](https://github.com/Kelvyn94/social-links-profile)
-- Live Site URL: [Add your live site URL here](https://kelvyn94.github.io/social-links-profile/)
+- Solution URL: [https://github.com/Kelvyn94/social-links-profile]
+- Live Site URL: [https://kelvyn94.github.io/social-links-profile/]
 
 ## My process
 
