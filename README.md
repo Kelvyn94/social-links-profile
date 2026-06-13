@@ -28,15 +28,19 @@ Users should be able to:
 ### Screenshot
 
 ![Desktop view of the social links profile](./design/desktop-design.jpg)
+
+
 ![Mobile view of the social links profile](./design/mobile-design.jpg)
+
+
 ![Active states showing hover effects](./design/active-states.jpg)
 
 _(Screenshot files are in the `/design` folder from the starter kit)_
 
 ### Links
 
-- Solution URL: [Add your solution URL here](https://github.com/Kelvyn94/social-links-profile)
-- Live Site URL: [Add your live site URL here](https://kelvyn94.github.io/social-links-profile/)
+- Solution URL: [https://github.com/Kelvyn94/social-links-profile]
+- Live Site URL: [https://kelvyn94.github.io/social-links-profile/]
 
 ## My process
 
