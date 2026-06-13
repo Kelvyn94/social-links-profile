@@ -33,7 +33,8 @@ Users should be able to:
 ![Mobile view of the social links profile](./design/mobile-design.jpg)
 
 
-![Active states showing hover effects](./design/active-states.jpg)
+![Active states showing hover effects](<img width="1027" height="571" alt="image" src="https://github.com/user-attachments/assets/c117cf9e-a588-49b8-b235-506288a2ecca" />
+)
 
 _(Screenshot files are in the `/design` folder from the starter kit)_
 
