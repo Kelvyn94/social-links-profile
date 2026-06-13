@@ -27,14 +27,21 @@ Users should be able to:
 
 ### Screenshot
 
-Desktop view of the social links profile(./design/desktop-design.jpg)
+Desktop view of the social links profile:
+
+<img width="1440" height="960" alt="image" src="https://github.com/user-attachments/assets/42137a6d-a75b-4fa5-bf89-d65899a94226" />
 
 
-Mobile view of the social links profile(./design/mobile-design.jpg)
+
+Mobile view of the social links profile:
+
+<img width="375" height="812" alt="image" src="https://github.com/user-attachments/assets/349f4c46-d21c-4850-886a-57fb3027cd94" />
+
 
 
 Active states showing hover effects
-<img width="1027" height="571" alt="image" src="https://github.com/user-attachments/assets/c117cf9e-a588-49b8-b235-506288a2ecca" />
+<img width="1440" height="960" alt="image" src="https://github.com/user-attachments/assets/fb13824a-e877-4e55-8607-01fd38db40ad" />
+
 
 ### Links
 
