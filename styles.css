@@ -1,62 +1,117 @@
+/* CSS Custom Properties (Variables) */
+:root {
+  /* Colors */
+  --color-primary: hsl(0, 0%, 8%);
+  --color-secondary: hsl(0, 0%, 12%);
+  --color-tertiary: hsl(0, 0%, 20%);
+  --color-accent: hsl(75, 94%, 57%);
+  --color-text: hsl(0, 0%, 100%);
+  --color-text-muted: hsl(0, 0%, 50%);
+  --color-link: hsl(228, 45%, 44%);
+  
+  /* Spacing */
+  --spacing-xs: 0.4rem;
+  --spacing-sm: 0.8rem;
+  --spacing-md: 1.6rem;
+  --spacing-lg: 2.4rem;
+  --spacing-xl: 3.2rem;
+  --spacing-xxl: 4rem;
+  
+  /* Typography */
+  --font-family-primary: "Inter", sans-serif;
+  --font-size-xs: clamp(0.75rem, 2vw, 0.875rem);
+  --font-size-sm: clamp(0.875rem, 2.5vw, 1rem);
+  --font-size-base: clamp(1rem, 3vw, 1.4rem);
+  --font-size-md: clamp(1.2rem, 3.5vw, 1.6rem);
+  --font-size-lg: clamp(1.4rem, 4vw, 2.4rem);
+  --font-size-xl: clamp(1.8rem, 5vw, 2.8rem);
+  
+  /* Border Radius */
+  --radius-sm: 0.8rem;
+  --radius-md: 1.2rem;
+  --radius-full: 50%;
+  
+  /* Transitions */
+  --transition-duration: 0.3s;
+  --transition-easing: ease;
+}
+
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body stylings */
+/* Base styles */
 body {
-  font-family: "Inter", sans-serif;
-  font-size: 1.4rem;
-  background-color: hsl(0, 0%, 8%);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  background-color: var(--color-primary);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: var(--spacing-md);
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .social-link {
+    transition: none !important;
+  }
 }
 
 /* Card styling */
 .card {
-  background-color: hsl(0, 0%, 12%);
-  width: 90%;
+  background-color: var(--color-secondary);
+  width: min(90%, 38.4rem);
   max-width: 38.4rem;
-  border-radius: 1.2rem;
-  padding: 4rem 2.4rem 3.2rem 2.4rem;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-xxl) var(--spacing-lg) var(--spacing-xl) var(--spacing-lg);
   text-align: center;
 }
 
 .profile-image {
   width: 8.8rem;
   height: 8.8rem;
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   object-fit: cover;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2.4rem;
+  margin-inline: auto; /* Logical property - replaces margin-left/right: auto */
+  margin-block-end: var(--spacing-lg); /* Logical property - replaces margin-bottom */
 }
 
 /* Text styles */
 .name {
-  color: hsl(0, 0%, 100%);
-  font-size: 2.4rem;
+  color: var(--color-text);
+  font-size: var(--font-size-lg);
   font-weight: 600;
-  margin-bottom: 0.8rem;
+  margin-block-end: var(--spacing-sm); /* Logical property */
 }
 
 .location {
-  color: hsl(75, 94%, 57%);
-  font-size: 1.4rem;
+  color: var(--color-accent);
+  font-size: var(--font-size-sm);
   font-weight: 600;
-  margin-bottom: 2.4rem;
+  margin-block-end: var(--spacing-lg); /* Logical property */
 }
 
 .bio {
-  color: hsl(0, 0%, 100%);
-  font-size: 1.4rem;
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
   font-weight: 400;
-  margin-bottom: 2.4rem;
+  margin-block-end: var(--spacing-lg); /* Logical property */
 }
 
 /* Social links (button) */
@@ -64,46 +119,49 @@ body {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: var(--spacing-md);
 }
 
 .social-link {
   display: block;
-  background-color: hsl(0, 0%, 20%);
-  color: hsl(0, 0%, 100%);
+  background-color: var(--color-tertiary);
+  color: var(--color-text);
   text-decoration: none;
   font-weight: 600;
-  padding: 1.2rem 2.4rem;
-  border-radius: 0.8rem;
-  transition: all 0.3s ease;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-duration) var(--transition-easing),
+              color var(--transition-duration) var(--transition-easing);
+  /* Only transition background-color and color, not all properties */
 }
 
-/* Hover state - when mouse goes over the button*/
+/* Hover state - when mouse goes over the button */
 .social-link:hover {
-  background-color: hsl(75, 94%, 57%);
-  color: hsl(0, 0%, 8%);
+  background-color: var(--color-accent);
+  color: var(--color-primary);
   cursor: pointer;
 }
 
-/* Focus state  - for keyboard navigation*/
-.social-link:focus {
-  background-color: hsl(75, 94%, 57%);
-  color: hsl(0, 0%, 8%);
-  cursor: pointer;
+/* Focus state - for keyboard navigation */
+.social-link:focus-visible {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }
 
-/* Attribution Footer  */
+/* Attribution Footer */
 .attribution {
-  font-size: 0.6875rem;
+  font-size: var(--font-size-xs);
   text-align: center;
-  color: hsl(0, 0%, 50%);
-  margin-top: 2.4rem;
-  position: absolute;
-  bottom: 1.6rem;
+  color: var(--color-text-muted);
+  margin-block-start: var(--spacing-lg); /* Logical property */
+  padding-block: var(--spacing-md); /* Logical property */
+  width: 100%;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--color-link);
   text-decoration: none;
 }
 
@@ -111,30 +169,63 @@ body {
   text-decoration: underline;
 }
 
-/* Responsive Design  */
+/* Mobile-first responsive design */
 
-/* Tablet and desktop adjustments */
+/* Base styles are for mobile (already defined above) */
+
+/* Tablet adjustments */
 @media (min-width: 48rem) {
   .card {
-    padding: 4rem 3.2rem 3.2rem 3.2rem;
+    padding: var(--spacing-xxl) var(--spacing-xl) var(--spacing-xl) var(--spacing-xl);
   }
 
   .social-link {
-    padding: 1.4rem 2.4rem;
+    padding: calc(var(--spacing-md) + 0.2rem) var(--spacing-lg);
   }
 }
 
-/* Very small phone (under 375px) */
+/* Large desktop adjustments */
+@media (min-width: 64rem) {
+  .card {
+    padding: calc(var(--spacing-xxl) * 1.25) calc(var(--spacing-xl) * 1.25);
+  }
+}
+
+/* Very small screens - using min-width with mobile-first approach */
 @media (max-width: 23.4375rem) {
   .card {
     width: 95%;
-    padding: 3.2rem 2rem 2.8rem 2rem;
+    padding: var(--spacing-xl) var(--spacing-md) calc(var(--spacing-xl) - 0.4rem) var(--spacing-md);
   }
+  
+  .profile-image {
+    width: clamp(6rem, 20vw, 8.8rem);
+    height: clamp(6rem, 20vw, 8.8rem);
+  }
+}
 
-  /* Respect user's font size preferences, if user sets browser font size larger, everything scales gracefully */
-  @media (prefers-reduced-motion: no-preference) {
-    html {
-      scroll-behavior: smooth;
-    }
+/* Smooth scrolling - only if user doesn't prefer reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Print styles - optional but good practice */
+@media print {
+  body {
+    background-color: white;
+  }
+  
+  .card {
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: none;
+  }
+  
+  .social-link {
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
   }
 }
