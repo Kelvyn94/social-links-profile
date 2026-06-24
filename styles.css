@@ -34,6 +34,12 @@
   /* Transitions */
   --transition-duration: 0.3s;
   --transition-easing: ease;
+
+    /* Add print-specific variables */
+  --color-print-bg: white;
+  --color-print-border: #ddd;
+  --color-print-text: #333;
+  --color-print-link-bg: #f5f5f5;
 }
 
 /* Reset */
@@ -61,10 +67,10 @@ body {
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+    scroll-behavior: auto;
   }
   
   .social-link {
@@ -214,18 +220,18 @@ body {
 /* Print styles - optional but good practice */
 @media print {
   body {
-    background-color: white;
+    background-color: var(--color-print-bg);
   }
   
   .card {
-    background-color: white;
-    border: 1px solid #ddd;
+    background-color: var(--color-print-bg);
+    border: 1px solid var(--color-print-border);
     box-shadow: none;
   }
   
   .social-link {
-    background-color: #f5f5f5;
-    color: #333;
-    border: 1px solid #ddd;
+    background-color: var(--color-print-bg);
+    color: var(--color-print-text);
+    border: 1px solid var(--color-print-border);
   }
 }
